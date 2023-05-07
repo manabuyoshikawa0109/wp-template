@@ -1,0 +1,12 @@
+{
+    "name": "yoshikawamanabu/sample",
+    "authors": [
+        {
+            "name": "Manabu Yoshikawa",
+            "email": "m.y.ichinishi.tennis@gmail.com"
+        }
+    ],
+    "require": {
+        "jenssegers/blade": "^1.4"
+    }
+}
