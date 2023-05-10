@@ -18,9 +18,11 @@ use Jenssegers\Blade\Blade;
 
 /**
  * Bladeテンプレートをレンダリングする
+ * @param string $template_name
+ * @return string
  */
 if (!function_exists('render_blade')) {
-    function render_blade($template_name)
+    function render_blade(string $template_name)
     {
         /**
          * グローバル変数を呼び出し
