@@ -1,3 +1,3 @@
 <footer>
-    This is a footer.
+    これはフッターです。
 </footer>
