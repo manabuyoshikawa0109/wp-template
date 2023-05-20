@@ -84,12 +84,12 @@ function pagination(int $total_page = null, int $range = 2)
         return null;
     }
 
-    $pagination_html = "<div class=\"pagination\"><ul>";
+    $pagination_html = "<div class=\"pagination\">\n<ul>\n";
 
     // 現在のページが1ページ目でない場合、「前へ」のリンク表示
     if ($current_page != 1) {
         $previous_page_url = get_pagenum_link($current_page - 1);
-        $pagination_html .= "<li class=\"prev\"><a href=\"{$previous_page_url}\">Prev</a></li>";
+        $pagination_html .= "<li class=\"prev\"><a href=\"{$previous_page_url}\">Prev</a></li>\n";
     }
 
 
@@ -100,10 +100,10 @@ function pagination(int $total_page = null, int $range = 2)
         if (($current_page - $range) <= $page && $page <= ($current_page + $range)){
             // 現在のページ数の場合
             if ($page == $current_page) {
-                $pagination_html .= "<li class=\"current\">{$page}</li>";
+                $pagination_html .= "<li class=\"current\">{$page}</li>\n";
             } else {
                 $page_url = get_pagenum_link($page);
-                $pagination_html .= "<li><a href=\"{$page_url}\">{$page}</a></li>";
+                $pagination_html .= "<li><a href=\"{$page_url}\">{$page}</a></li>\n";
             }
         }
     }
@@ -112,10 +112,10 @@ function pagination(int $total_page = null, int $range = 2)
     // 現在のページ数が総ページ数より小さい場合、「次へ」のリンク表示
     if ($current_page < $total_page) {
         $next_page_url = get_pagenum_link($current_page + 1);
-        $pagination_html .= "<li class=\"next\"><a href=\"{$next_page_url}\">Next</a></li>";
+        $pagination_html .= "<li class=\"next\"><a href=\"{$next_page_url}\">Next</a></li>\n";
     }
 
-    $pagination_html .= "</ul></div>";
+    $pagination_html .= "</ul>\n</div>\n";
 
     return $pagination_html;
 }
