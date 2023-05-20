@@ -2,7 +2,7 @@
     <h1>
         {{-- ホーム画面に戻るURL --}}
         <a href="{{ home_url() }}">
-            {{-- 管理画面から入力されたロゴ画像を反映、alt属性にWordpress環境構築時に指定したこのサイトのタイトルを反映 --}}
+            {{-- 管理画面から入力されたロゴ画像を反映、alt属性にWordPress環境構築時に指定したこのサイトのタイトルを反映 --}}
             <img style="width: 100px;" src="{{ header_image() }}" alt="{{ bloginfo('name') }}">
         </a>
     </h1>

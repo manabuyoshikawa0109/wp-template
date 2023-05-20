@@ -3,7 +3,7 @@
 /**
  * 開発に関するルール
  * ■ 命名規則
- * wordpressの命名規則では変数・関数はスネークケース(全て小文字)にする
+ * WordPressの命名規則では変数・関数はスネークケース(全て小文字)にする
  * 参考：https://www.sejuku.net/blog/104248
  */
 
@@ -35,7 +35,7 @@ if (!function_exists('render_blade')) {
 }
 
 /**
- * カスタムヘッダー設定でWordpress管理画面からヘッダーにあるロゴ画像を登録できるようにする
+ * カスタムヘッダー設定でWordPress管理画面からヘッダーにあるロゴ画像を登録できるようにする
  * カスタムヘッダー画像の設定
  * get_bloginfo('template_url')でこのテンプレートまでのURLを取得
  */
@@ -46,7 +46,7 @@ $custom_header_defaults = [
 
 /**
  * カスタムヘッダー機能を有効化
- * 第1引数：custom-headerを渡すことでカスタムヘッダーを有効化することをWordpressに伝えている
+ * 第1引数：custom-headerを渡すことでカスタムヘッダーを有効化することをWordPressに伝えている
  * 第2引数：カスタムヘッダー利用時の設定条件を渡している
  */
 add_theme_support('custom-header', $custom_header_defaults);
@@ -54,7 +54,7 @@ add_theme_support('custom-header', $custom_header_defaults);
 /**
  * カスタムメニューを使用
  * 第1引数：wp_nav_menuメソッドに渡している配列のtheme_locationの値を渡す
- * 第2引数：Wordpress管理画面に表示させるメニュー位置の名前
+ * 第2引数：WordPress管理画面に表示させるメニュー位置の名前
  */
 register_nav_menu('header_menu', 'ヘッダーメニュー');
 
@@ -68,7 +68,7 @@ register_nav_menu('footer_menu', 'フッターメニュー');
  */
 function pagination(int $total_page = null, int $range = 2)
 {
-    // Wordpressで用意されている現在のページ数を表すグローバル変数
+    // WordPressで用意されている現在のページ数を表すグローバル変数
     global $paged;
     // 現在のページ数が1ページ目の場合、$pagedには0が返ってくるのでその場合1と変換
     $current_page = (0 < $paged) ? $paged : 1;

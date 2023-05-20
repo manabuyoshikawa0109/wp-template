@@ -23,7 +23,7 @@
                     @endwhile
                     <div class="pagination">
                         <ul>
-                            {{-- 記事の移動ページネーション(Wordpressで用意されているメソッド) --}}
+                            {{-- 記事の移動ページネーション(WordPressで用意されているメソッド) --}}
                             <li>{{ previous_post_link('%link', 'PREV') }}</li>
                             <li>{{ next_post_link('%link', 'NEXT') }}</li>
                         </ul>
@@ -33,7 +33,7 @@
                 @else
                     記事が見つかりませんでした。検索で見つかるかもしれません。
                     {{--
-                        Wordpressで用意されている記事検索用のフォームを表示
+                        WordPressで用意されている記事検索用のフォームを表示
                         カスタマイズしたい場合はsearchform.phpを用意
                         --}}
                     {{ get_search_form() }}
