@@ -76,7 +76,7 @@ function pagination(int $total_page = null, int $range = 2)
     // 引数の総ページ数がない場合、内部で総ページ数を取得(取得できなければ1とする)
     if ($total_page == null) {
         global $wp_query;
-        $total_page = (!$wp_query->max_num_pages) ? 1 : $wp_query->max_num_pages;
+        $total_page = ($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
     }
 
     // 総ページ数が1の場合、何も表示しない
