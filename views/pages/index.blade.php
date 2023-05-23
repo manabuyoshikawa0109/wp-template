@@ -5,6 +5,10 @@
     <div class="container">
         <div id="main">
             <div>
+                {{-- カスタムフィールドで入力したトップバナー画像を表示 --}}
+                <img src="{{ get_post_meta($post->ID, 'top_banner_image_url', true) }}" alt="">
+                {{-- カスタムフィールドで入力したGoogleマップ地図埋め込みコードを表示 --}}
+                {!! get_post_meta($post->ID, 'google_map_embedded_html', true) !!}
                 {{-- 投稿があるか存在チェック --}}
                 @if (have_posts())
                     {{-- 投稿がある場合はその回数分ループ --}}
